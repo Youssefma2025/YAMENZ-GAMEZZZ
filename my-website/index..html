@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>YAMENZ GAMEZZZ 🎮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #000000;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 30px;
+            border: 3px solid #ff0000;
+            margin-top: 50px;
+        }
+        
+        h1 {
+            color: #ff0000;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .image-preview {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            background: #ff0000;
+            border: 3px solid white;
+            border-radius: 10px;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .download-btn {
+            background: #ff0000;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+        
+        .success-message {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #ff0000;
+        }
+        
+        .button {
+            background: #ff0000;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .button-content {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 YAMENZ GAMEZZZ 🎮</h1>
+        
+        <div class="image-preview">
+            🖼️ 277134<br>
+            YAMENZ
+        </div>
+        
+        <button class="download-btn" onclick="downloadImage()">
+            ⬇️ انقر هنا لتحميل الصورة
+        </button>
+        
+        <button class="button" onclick="downloadImage()">
+            <span class="button-content">تحميل</span>
+        </button>
+        
+        <div class="success-message">
+            <h3>✅ انقر للتحميل</h3>
+            <k> YAMENZ GAMEZZ<k>
+           
+           
+            
+        </div>
+    </div>
+
+    <script>
+        function downloadImage() {
+            // إنشاء صورة 277134
+            const canvas = document.createElement('canvas');
+            canvas.width = 800;
+            canvas.height = 600;
+            const ctx = canvas.getContext('2d');
+            
+            // خلفية حمراء
+            ctx.fillStyle = '#ff0000';
+            ctx.fillRect(0, 0, 800, 600);
+            
+            // نص 277134 كبير
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 120px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('277134', 400, 250);
+            
+            // نص YAMENZ
+            ctx.font = 'bold 60px Arial';
+            ctx.fillText('YAMENZ GAMEZZZ', 400, 350);
+            
+            // إطار
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = 10;
+            ctx.strokeRect(20, 20, 760, 560);
+            
+            // تحميل الصورة
+            const link = document.createElement('a');
+            link.download = 'YAMENZ_277134.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+            
+            alert('🎉 تم تحميل الصورة بنجاح!');
+        }
+    </script>
+</body>
+</html>
+ECRIR YOUSSEF
