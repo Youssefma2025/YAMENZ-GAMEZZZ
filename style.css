@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('2777134.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    border: 3px solid #ff0000;
+    margin-top: 50px;
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    margin: 30px 0;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 500px;
+    border: 3px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.download-btn {
+    background: #ff0000;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+.file-info {
+    background: rgba(255, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(51, 51, 51, 0.8);
+    border-radius: 10px;
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 6px;
+}
+

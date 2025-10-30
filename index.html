@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAMENZ GAMEZZZ 🎮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-image: linear-gradient(45deg, #000000 0%, #1a0000 50%, #000000 100%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(10, 10, 10, 0.95);
+            border-radius: 25px;
+            padding: 50px;
+            border: 4px solid #ff0000;
+            margin-top: 30px;
+            box-shadow: 0 0 60px rgba(255, 0, 0, 0.4);
+        }
+
+        h1 {
+            color: #ff0000;
+            font-size: 4em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+            font-weight: bold;
+        }
+
+        .welcome-text {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .developer-info {
+            background: rgba(255, 0, 0, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid #ff0000;
+        }
+
+        .image-section {
+            margin: 40px 0;
+            padding: 25px;
+            background: rgba(255, 0, 0, 0.1);
+            border-radius: 20px;
+            border: 2px solid #ff0000;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 600px;
+            border: 4px solid #ff0000;
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+        }
+
+        .download-section {
+            margin: 50px 0;
+            padding: 30px;
+            background: rgba(255, 0, 0, 0.2);
+            border-radius: 20px;
+            border: 3px solid #ff0000;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: white;
+            padding: 25px 50px;
+            font-size: 1.8em;
+            text-decoration: none;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 20px 0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+            font-weight: bold;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #cc0000, #990000);
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 25px;
+            background: rgba(20, 20, 20, 0.9);
+            border-radius: 15px;
+            border-top: 3px solid #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YAMENZ GAMEZZZ</h1>
+        <div class="welcome-text">WELCOME</div>
+        <div style="color: #ff6b6b; font-size: 1.4em; margin-bottom: 40px;">YAMENZ GAMEZZZ</div>
+
+        <div class="developer-info">
+            <h3 style="color: #ff0000; font-size: 1.6em;">👨‍💻 المطور: يوسف</h3>
+            <p>الموقع قيد التطوير والتعديل</p>
+            <p>THE SITE IS UNDER DEVELOPMENT</p>
+        </div>
+
+        <div class="image-section">
+            <!-- إذا كانت الصورة غير موجودة، سنعرض بديل -->
+            <div id="imageContainer">
+                <img src="photo.jpeg" alt="YAMENZ GAMEZZZ" class="main-image" onerror="showAlternative()">
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h3 style="color: #ff0000; font-size: 1.8em; margin-bottom: 20px;">⬇️ تحميل الصورة</h3>
+            
+            <!-- زر التحميل الذي يعمل بدون صورة -->
+            <button class="download-btn" onclick="createAndDownloadImage()">
+                🎯 انقر لتحميل صورة YAMENZ 🎯
+            </button>
+            
+            <p style="margin-top: 15px; color: #ccc;">هذا الزر سينشئ صورة YAMENZ ويحمّلها</p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; margin: 25px 0;">
+            <p><strong>✅ الموقع يعمل完美!</strong></p>
+            <p><strong>✅ التحميل سيعمل完美!</strong></p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Ecrire à You Seef</strong></p>
+            <p>© 2025 YAMENZ GAMEZZZ</p>
+        </div>
+    </div>
+
+    <script>
+        // دالة لإنشاء صورة YAMENZ وتحميلها
+        function createAndDownloadImage() {
+            // إنشاء صورة YAMENZ
+            const canvas = document.createElement('canvas');
+            canvas.width = 800;
+            canvas.height = 600;
+            const ctx = canvas.getContext('2d');
+            
+            // خلفية سوداء
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, 800, 600);
+            
+            // إطار أحمر
+            ctx.strokeStyle = '#ff0000';
+            ctx.lineWidth = 15;
+            ctx.strokeRect(20, 20, 760, 560);
+            
+            // نص YAMENZ GAMEZZZ كبير
+            ctx.fillStyle = '#ff0000';
+            ctx.font = 'bold 80px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('YAMENZ GAMEZZZ', 400, 200);
+            
+            // نص 277134
+            ctx.font = 'bold 120px Arial';
+            ctx.fillText('277134', 400, 350);
+            
+            // نص المطور
+            ctx.font = 'bold 30px Arial';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('المطور: يوسف', 400, 480);
+            
+            // تحميل الصورة
+            const link = document.createElement('a');
+            link.download = 'YAMENZ_GAMEZZZ_Image.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+            
+            alert('🎉 تم تحميل صورة YAMENZ بنجاح!');
+        }
+
+        // إذا فشل تحميل الصورة الأصلية
+        function showAlternative() {
+            const container = document.getElementById('imageContainer');
+            container.innerHTML = `
+                <div style="background: #ff0000; color: white; padding: 100px; border-radius: 15px; font-size: 2em;">
+                    🖼️ YAMENZ GAMEZZZ<br>
+                    <span style="font-size: 3em;">277134</span>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
+Écrire à You Ssef
